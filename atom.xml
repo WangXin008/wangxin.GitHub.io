@@ -2,13 +2,172 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://WangXin008.github.io/wangxin.GitHub.io</id>
     <title>叁金的后花园</title>
-    <updated>2021-09-06T10:23:16.755Z</updated>
+    <updated>2021-09-06T10:35:57.274Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://WangXin008.github.io/wangxin.GitHub.io"/>
     <link rel="self" href="https://WangXin008.github.io/wangxin.GitHub.io/atom.xml"/>
     <logo>https://WangXin008.github.io/wangxin.GitHub.io/images/avatar.png</logo>
     <icon>https://WangXin008.github.io/wangxin.GitHub.io/favicon.ico</icon>
     <rights>All rights reserved 2021, 叁金的后花园</rights>
+    <entry>
+        <title type="html"><![CDATA[在 Markdown 中插入视频]]></title>
+        <id>https://WangXin008.github.io/wangxin.GitHub.io/post/zai-markdown-zhong-cha-ru-shi-pin/</id>
+        <link href="https://WangXin008.github.io/wangxin.GitHub.io/post/zai-markdown-zhong-cha-ru-shi-pin/">
+        </link>
+        <updated>2021-09-06T10:30:45.000Z</updated>
+        <content type="html"><![CDATA[<h2 id="插入-b-站视频">插入 B 站视频</h2>
+<p>直接嵌入 B 站中已上传的视频，使用的是 B 站上的视频自带的视频播放器。</p>
+<ol>
+<li>
+<p>在 B 站中，打开需要插入的视频，复制视频下方的“转发 &gt; 嵌入代码”。</p>
+<figure data-type="image" tabindex="1"><img src="https://WangXin008.github.io/wangxin.GitHub.io/post-images/1630924287269.png" alt="" loading="lazy"></figure>
+</li>
+<li>
+<p>在 markdown 中粘贴对应的代码，效果如下图所示。</p>
+<pre><code class="language-html">&lt;iframe src=&quot;//player.bilibili.com/player.html?aid=720018804&amp;bvid=BV1qQ4y1Y7V2&amp;cid=395043780&amp;page=1&quot; scrolling=&quot;no&quot; border=&quot;0&quot; frameborder=&quot;no&quot; framespacing=&quot;0&quot; allowfullscreen=&quot;true&quot;  width=&quot;700px&quot; height=&quot;472px&quot;&gt; &lt;/iframe&gt;
+
+</code></pre>
+<figure data-type="image" tabindex="2"><img src="https://WangXin008.github.io/wangxin.GitHub.io/post-images/1630924299650.png" alt="" loading="lazy"></figure>
+</li>
+</ol>
+<h2 id="插入云上对象存储中的视频">插入云上对象存储中的视频</h2>
+<p>直接插入本地已上传至公网的视频，使用的是自定义的 HTML 标签的视频播放器。</p>
+<ol>
+<li>
+<p>将本地已有的 mp4 格式的视频文件上传至对象存储中，这里以阿里云的对象存储为例。</p>
+<figure data-type="image" tabindex="3"><img src="https://WangXin008.github.io/wangxin.GitHub.io/post-images/1630924312903.png" alt="" loading="lazy"></figure>
+</li>
+<li>
+<p>在 markdown 中，编写如下 html 标签段，效果如下图所示。</p>
+<pre><code class="language-html">&lt;video controls height='100%' width='100%' src=&quot;https://encooacademy.oss-cn-shanghai.aliyuncs.com/activity/OpenBrowser.mp4&quot;&gt;&lt;/video&gt;
+
+</code></pre>
+<blockquote>
+<p><strong>说明：</strong></p>
+<p>在 &quot;src&quot; 属性的值是变化的，需要更换对象存储中 mp4 视频的链接。</p>
+</blockquote>
+<figure data-type="image" tabindex="4"><img src="https://WangXin008.github.io/wangxin.GitHub.io/post-images/1630924324982.png" alt="" loading="lazy"></figure>
+</li>
+</ol>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Github + Markdown 写作环境]]></title>
+        <id>https://WangXin008.github.io/wangxin.GitHub.io/post/github-markdown-xie-zuo-huan-jing/</id>
+        <link href="https://WangXin008.github.io/wangxin.GitHub.io/post/github-markdown-xie-zuo-huan-jing/">
+        </link>
+        <updated>2021-09-06T10:29:17.000Z</updated>
+        <content type="html"><![CDATA[<h2 id="概述">概述</h2>
+<p>本文主要介绍通过使用 GitHub Desktop 和 Visual Studio Code 工具，搭建编写 markdown 格式的文档的写作环境。</p>
+<h2 id="github-desktop">Github Desktop</h2>
+<p><a href="https://desktop.github.com/">Github  Desktop</a> 是用 Git 做版本控制的代码托管平台，它提供了 web 界面，你可以在上面创建资源仓库来存放你的项目。</p>
+<h2 id="visual-studio-code">Visual Studio Code</h2>
+<p><a href="https://code.visualstudio.com/Download">Visual Studio Code</a> 是一款代码编辑器。再加上丰富的插件库和集成 Git，可以很方便的完成从写作到发布，用它来写 markdown 格式的文章等再适合不过了。</p>
+<h2 id="基于-vscode-搭建-markdown-写作环境">基于 VSCode 搭建 Markdown 写作环境</h2>
+<ol>
+<li>
+<p>安装好 Github Desktop 后，具体的使用，可参考 <a href="https://www.jianshu.com/p/a6fc842f501d">GitHub Desktop 图文教程</a>。</p>
+</li>
+<li>
+<p>安装好 Visual Studio Code 后，具体的使用，可参考 <a href="https://zhuanlan.zhihu.com/p/56943330">使用 VSCode 编写 Markdown</a>。</p>
+</li>
+<li>
+<p>Github Desktop 工具与 Visual Studio Code 工具关联：</p>
+<figure data-type="image" tabindex="1"><img src="https://WangXin008.github.io/wangxin.GitHub.io/post-images/1630924195812.png" alt="" loading="lazy"></figure>
+</li>
+</ol>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[技术传播]]></title>
+        <id>https://WangXin008.github.io/wangxin.GitHub.io/post/ji-zhu-chuan-bo/</id>
+        <link href="https://WangXin008.github.io/wangxin.GitHub.io/post/ji-zhu-chuan-bo/">
+        </link>
+        <updated>2021-09-06T10:28:00.000Z</updated>
+        <content type="html"><![CDATA[<h2 id="概述">概述</h2>
+<p><strong>技术传播</strong> 是指与技术性产品、软件或服务有关且伴随其全部生命周期的所有技术信息的传递和交互。即，如何在人与人或者人与机器之间有效地传递和分享产品技术信息。</p>
+<h2 id="从技术写作到技术传播">从技术写作到技术传播</h2>
+<ul>
+<li>创意写作（Creative writing），打动人的心灵</li>
+<li>文案写作（Commercial copy writing），销售产品</li>
+<li>商务写作（Bussiness writing），商务邮件、合同、纪要等，便于商务使用</li>
+<li>科学写作（Scientific writing），记录和分享科学发现</li>
+<li><strong>技术写作（Technical writing），解释工作原理、指导用户完成特定操作</strong></li>
+</ul>
+<figure data-type="image" tabindex="1"><img src="https://WangXin008.github.io/wangxin.GitHub.io/post-images/1630924124109.png" alt="" loading="lazy"></figure>
+<h2 id="技术传播的价值">技术传播的价值</h2>
+<p><strong>技术传播</strong> 是企业与用户之间对话的桥梁。是产品的组成部分，满足法律法规要求。</p>
+<ul>
+<li>帮助用户自助服务，降低企业服务成本。</li>
+<li>是用户了解产品的利器，提升产品品牌和营销力。</li>
+<li>以用户思维，驱动提升产品可用性。</li>
+</ul>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[文档质量]]></title>
+        <id>https://WangXin008.github.io/wangxin.GitHub.io/post/wen-dang-zhi-liang/</id>
+        <link href="https://WangXin008.github.io/wangxin.GitHub.io/post/wen-dang-zhi-liang/">
+        </link>
+        <updated>2021-09-06T10:26:17.000Z</updated>
+        <content type="html"><![CDATA[<h2 id="概述">概述</h2>
+<p><strong>技术文档质量</strong>是产品帮助中心质量的重要组成部分。对于帮助中心而言，理解用户在技术文档使用中的信息行为，能帮助技术文档写作人员开发出对用户更友好的产品资料。</p>
+<h2 id="文档质量评估方式">文档质量评估方式</h2>
+<ul>
+<li>
+<p><strong>质量控制</strong></p>
+<ol>
+<li>文档测试（随版本专业团队测试、模拟小白测试、专项测试）</li>
+<li>文档上线 1+1 审核（正确性编辑、校验）</li>
+<li>低错检查</li>
+</ol>
+</li>
+<li>
+<p><strong>质量评估</strong></p>
+<ol>
+<li>用户使用文档的数据分析（跳出率/点击量/PV/负反馈/提问题量）</li>
+<li>对服务侧的引导分析（工单拦截率、点赞/点踩数、工单趋势分析）</li>
+<li>内部评估（比对 DQTI 制定的 checklist）</li>
+</ol>
+</li>
+</ul>
+<h2 id="高质量文档写作的要素">高质量文档写作的要素</h2>
+<p>在评估帮助中心质量时，常常考虑帮助中心信息的 <strong>易找性</strong>、<strong>易用性</strong>、<strong>易理解性</strong>。</p>
+<p><strong>易使用</strong></p>
+<ul>
+<li>面向任务：帮助用户完成任务，已达到他们使用产品的目的。</li>
+<li>精确：避免错误，称述事实的真相。</li>
+<li>完整：包含所有必要的内容（仅限于必要的内容）。</li>
+</ul>
+<p><strong>易理解</strong></p>
+<ul>
+<li>清晰：避免使用含糊不清，晦涩难懂的词语。让读者在第一次阅读这句句子时，即了解到句子所要表达的所有意思。</li>
+<li>具体：提供适当的例子、情景介绍、明喻、类比、具体的语法举例、图表。</li>
+<li>风格：使用妆具正确性和精准性的词汇和词组，培养严谨的写作习惯。</li>
+</ul>
+<p><strong>易查找</strong></p>
+<ul>
+<li>组织：连贯的内容组织和编排，符合用户的使用场景和目的。</li>
+<li>可检索：内容的呈现方式需要使用户能够快速和容易的定位到所需要的具体内容。</li>
+<li>视觉效果：使用布局、插图、颜色、图标和其他图形化的表达方式来形成具有吸引力和需要强调的文字。</li>
+</ul>
+<figure data-type="image" tabindex="1"><img src="https://WangXin008.github.io/wangxin.GitHub.io/post-images/1630924048600.png" alt="" loading="lazy"></figure>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[信息体验]]></title>
+        <id>https://WangXin008.github.io/wangxin.GitHub.io/post/xin-xi-ti-yan/</id>
+        <link href="https://WangXin008.github.io/wangxin.GitHub.io/post/xin-xi-ti-yan/">
+        </link>
+        <updated>2021-09-06T10:24:22.000Z</updated>
+        <content type="html"><![CDATA[<h2 id="目标">目标</h2>
+<p>减少文档，优化交互信息，提升用户体验。<br>
+<img src="https://WangXin008.github.io/wangxin.GitHub.io/post-images/1630923920394.png" alt="" loading="lazy"></p>
+<h2 id="建议">建议</h2>
+<p>信息体验改进的4个层次。</p>
+<figure data-type="image" tabindex="1"><img src="https://WangXin008.github.io/wangxin.GitHub.io/post-images/1630923929751.png" alt="" loading="lazy"></figure>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[技术写作协作流程]]></title>
         <id>https://WangXin008.github.io/wangxin.GitHub.io/post/ji-zhu-xie-zuo-xie-zuo-liu-cheng/</id>
